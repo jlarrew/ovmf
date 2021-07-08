@@ -1,0 +1,32 @@
+### Commented entries have reasonable defaults.
+### Uncomment to edit them.
+# Source: <source package name; defaults to package name>
+Section: misc
+Priority: optional
+# Homepage: <enter URL here; no default>
+Standards-Version: 3.9.2
+
+Package: ovmf-sev-es-snp
+Version: 0~20210510.4e5ecdba-1amd1.0
+Maintainer: Jesse Larrew <jesse.larrew@amd.com>
+# Pre-Depends: <comma-separated list of packages>
+# Depends: <comma-separated list of packages>
+Recommends: qemu-sev-es-snp
+# Suggests: <comma-separated list of packages>
+# Provides: <comma-separated list of packages>
+# Replaces: <comma-separated list of packages>
+Architecture: amd64
+Multi-Arch: same
+Copyright: debian/copyright
+Changelog: debian/changelog
+Readme: debian/README.Debian
+# Extra-Files: <comma-separated list of additional files for the doc directory>
+# Links: <pair of space-separated paths; First is path symlink points at, second is filename of link>
+Files: Build/OvmfX64/DEBUG_GCC5/FV/OVMF_CODE.fd /usr/local/share/qemu
+#  <more pairs, if there's more than one file to include. Notice the starting space>
+Description: UEFI firmware for AMD SEV virtual machines
+ Open Virtual Machine Firmware is a build using EDK II for 64-bit x86 virtual
+ machines. It includes full support for UEFI, including Secure Boot, allowing
+ use of UEFI in place of a traditional BIOS in your VM.
+ .
+ This package includes support for SEV, SEV-ES, and SEV-SNP virtual machines.
